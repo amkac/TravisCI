@@ -3,6 +3,8 @@ install:
 
 script:
 - asciidoctor faq.adoc
-
+env:
+  global:
+    secure:xeNhDyAxNgn5JGquXewj
 after_success: 
 - bash monscript.sh

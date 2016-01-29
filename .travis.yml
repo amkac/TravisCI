@@ -1,0 +1,5 @@
+install:
+- gem install asciidoctor
+
+script:
+- asciidoctor faq.adoc

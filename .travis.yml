@@ -5,6 +5,7 @@ script:
 - asciidoctor faq.adoc
 env:
   global:
-    secure:xeNhDyAxNgn5JGquXewj
+    - GH_REF: github.com/kacimimoghite/testHtmlGenerator.git
+    - secure: "<.... encrypted data from above ....>"
 after_success: 
 - bash monscript.sh

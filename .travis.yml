@@ -6,6 +6,6 @@ script:
 env:
   global:
     - GH_REF: github.com/kacimimoghite/testHtmlGenerator.git
-    - secure: xeNhDyAxNgn5JGquXewj 
+    - secure: RWT4oOosY73iSOtqq3fI1usI2cNhn51mIMwyZa63Mt6oBs6buuGZNDvnp/BIn46AkeQyuk3KuD6mD3mAT+LzpIecQdpT5Za+6j7wVlZ9HqaFecN8vmLwjPDdxZ3b82APQFKmZo4erOX0e36FfFJ2H/Zk7/FH/Q0caBGr3js2704qF5ZvPX/oGFOWnqGmjlE0hOLU6iuIOGI/fHMnHsQVj9NVzaPFMOcCevOOOfWB3KU9Pav+bVDDjz3fS3j13WSnWMyyl0lgRDeVDr68T3KeS1HJS6sxKw5IyZ7DawIUfw5s60Xfnm57mX4R3mfVm8mGF4NYD11015MtZqHeaGUoOLB1e/oeFs8NhGiSBBYA++/1L8rlX5V+KV+WFlF7F1uad91YwSbrxxp+M8bwvFByOf3NlkmJnXWb4VDGb3lecEnvVMhxiAVLVTcDvV29A/RDX7nrUbKocZTtAKiHXiLrqmS/fRBS4XXMbb4y8tEiljT4BWyNYboArfjH0kbfOX8jIs75XeRQvapDdPgNO24ZYu5mtMSL14S3v0eu/F0TR20uXHWdX2kZ1OrEiwW0GXf6AE1WFLFobC27DSX+/Rra8B0UeUTtQdrjeYTKek8tBuxYl/nP4yynWAZTZk3/xY8nLK7wObygRWXuQFvEp1LgqfNTri+EbVI8S4Ovx4Jg9Pk=
 after_success: 
 - bash monscript.sh

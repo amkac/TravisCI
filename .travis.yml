@@ -3,3 +3,6 @@ install:
 
 script:
 - asciidoctor faq.adoc
+
+after_success: 
+- bash monscript.sh

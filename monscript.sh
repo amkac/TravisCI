@@ -5,7 +5,7 @@ git config --global user.email "moghitkacimi@gmail.com"
 git config --global user.name "kacimimoghite"
 
 #using token clone gh-pages branch
- git clone --quiet --branch=doc "https://${GH_TOKEN}@github.com/{GH_REF}"  doc > /dev/null
+ git clone --quiet --branch=doc "https://${GH_TOKEN}@github.com/${GH_REF}"  doc > /dev/null
 
 
 

@@ -6,6 +6,6 @@ script:
 env:
   global:
     - GH_REF: github.com/kacimimoghite/testHtmlGenerator.git
-    - secure: "<.... encrypted data from above ....>"
+    - secure: xeNhDyAxNgn5JGquXewj 
 after_success: 
 - bash monscript.sh

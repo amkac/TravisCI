@@ -4,17 +4,7 @@ script:
 - asciidoctor faq.adoc
 env:
   global:
-<<<<<<< HEAD
     - GH_REF: kacimimoghite/testHtmlGenerator.git
-    - secure: xeNhDyAxNgn5JGquXewj 
+    - secure: GnB23mqiTFwdpf39ncP1Kcn7bkEadvADTPpQt8hwQgvb5MDTcpfpSgAfIruomL5CF05RSKTBS7s4Xdqxmn9Bs9HL03WqL1EVxlmJbFa/iVwiLYyd56gPm5+BbtR235gJYK6fThlCDVSf/zE/+O2GzjuKIeduaS29tTiz+kGZqCogq6PO0QBetM7T5OtTH3J8L6SIpG8QqC2pwGB7At/8CPuzL+VSHpC8jhgrrtFHvFO17nt2+FLiMfQsAo1IMRptbx6JfCzG6vL98qulL5GGgg+ltp43J9P+uKjPFZcNtfeI6KNOmBCrXn7SkxQPPCDzyBFFafOGJfNGkhxq8e740GcOgztRfVCEgOglskCdiq53D64/Cish4sPL1YPLqeqNDISGtkTqDlw84zE6LPUKbmvq6jm3hGxf85GK4J/znTx7qCmzt1kHlchYODobuzR/9zsTrSSVMEtxFPPuhUFbCGtxt7TndE2Z77/9lKMWlIg1KpybPjHD50oFzNcVHDndbIcJSqXJWJc8HiTAMibEBPcf0Qm4cdj2EkZ2AJp1PvmkicnxOvPjkwK0PTNzsixYe147aX+oCLw04LiD8MGBH0n87RPorGXo/1c5EAJ22AKievMtBcn8oJ+IaXMifbqjjekhIbGl9M+GTMNY4A8uDm+hcJ/5n/Yh5p7ZI23XHWY= 
 after_success: 
 - bash monscript.sh
-=======
-  - GH_REF: kacimimoghite/testHtmlGenerator.git
-
-  - secure: GnB23mqiTFwdpf39ncP1Kcn7bkEadvADTPpQt8hwQgvb5MDTcpfpSgAfIruomL5CF05RSKTBS7s4Xdqxmn9Bs9HL03WqL1EVxlmJbFa/iVwiLYyd56gPm5+BbtR235gJYK6fThlCDVSf/zE/+O2GzjuKIeduaS29tTiz+kGZqCogq6PO0QBetM7T5OtTH3J8L6SIpG8QqC2pwGB7At/8CPuzL+VSHpC8jhgrrtFHvFO17nt2+FLiMfQsAo1IMRptbx6JfCzG6vL98qulL5GGgg+ltp43J9P+uKjPFZcNtfeI6KNOmBCrXn7SkxQPPCDzyBFFafOGJfNGkhxq8e740GcOgztRfVCEgOglskCdiq53D64/Cish4sPL1YPLqeqNDISGtkTqDlw84zE6LPUKbmvq6jm3hGxf85GK4J/znTx7qCmzt1kHlchYODobuzR/9zsTrSSVMEtxFPPuhUFbCGtxt7TndE2Z77/9lKMWlIg1KpybPjHD50oFzNcVHDndbIcJSqXJWJc8HiTAMibEBPcf0Qm4cdj2EkZ2AJp1PvmkicnxOvPjkwK0PTNzsixYe147aX+oCLw04LiD8MGBH0n87RPorGXo/1c5EAJ22AKievMtBcn8oJ+IaXMifbqjjekhIbGl9M+GTMNY4A8uDm+hcJ/5n/Yh5p7ZI23XHWY=
-
-after_success:
-- bash monscript.sh
-
->>>>>>> d30e0e6d273e9097b309c5769aef3fbdb56f4bc6

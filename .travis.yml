@@ -5,7 +5,7 @@ script:
 - asciidoctor faq.adoc
 env:
   global:
-    - GH_REF: github.com/kacimimoghite/testHtmlGenerator.git
+    - GH_REF: kacimimoghite/testHtmlGenerator.git
     - secure: xeNhDyAxNgn5JGquXewj 
 after_success: 
 - bash monscript.sh

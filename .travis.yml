@@ -1,7 +1,7 @@
 install:
 - gem install asciidoctor
 script:
-- asciidoctor faq.adoc
+- asciidoctor faq.adoc -o html/faq.html
 env:
   global:
     - GH_REF: kacimimoghite/testHtmlGenerator.git

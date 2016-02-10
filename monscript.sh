@@ -1,14 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 cp -R html $HOME/html
+
 #configuration
 cd $HOME
-ls
+
 git config --global user.email "moghitkacimi@gmail.com"
 git config --global user.name "kacimimoghite"
 
 #clone branch gh-pages
-git clone --quiet https://${GH_TOKEN}@github.com/${GH_REF}  gh-pages > /dev/null
+git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/${GH_REF}  gh-pages > /dev/null
 #git clone --quiet https://${GH_TOKEN}@github.com/${GH_REF}  master > /dev/null
 
 cd gh-pages

@@ -13,8 +13,9 @@ git clone --quiet https://${GH_TOKEN}@github.com/${GH_REF}  gh-pages > /dev/null
 
 cd gh-pages
 #cd master
+ls
 cp $HOME/html/faq.html ./index.html
-ls -a
+
 
 
  #add, commit and push files

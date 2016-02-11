@@ -22,7 +22,6 @@ cp $HOME/html/faq.html ./index.html
  #add, commit and push files
  git add -f .
  git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages "
- #git push -fq origin master > /dev/null
  #git push -f -q https://${GH_TOKEN}@github.com/${GH_REF} origin gh-pages > /dev/null
  git push -fq origin gh-pages > /dev/null
 
@@ -31,5 +30,6 @@ cp $HOME/html/faq.html ./index.html
 
 
  echo -e "Deploy completed\n"
+
 
  #fi

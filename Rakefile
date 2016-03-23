@@ -15,6 +15,6 @@ require 'rake/testtask'
 desc "Check all external links"
 task :check_links do
  require 'link_checker'
- LinkChecker.new(:target => 'output').check_uris
+ LinkChecker.new(:target => 'html').check_uris
 end
 

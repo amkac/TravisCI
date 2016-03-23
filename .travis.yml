@@ -5,7 +5,7 @@ install:
 script:
 #- asciidoctor faq.adoc -o html/faq.html
 - asciidoctor -a icons -a linkcss! -a numbered -a imagesdir=images main.asc -o html/faq.html
-- rake rakefile
+- rake check_links
 
 
 env:

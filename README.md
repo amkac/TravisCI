@@ -1,7 +1,5 @@
-Deployer fichier.html sur gh-pages avec travis-ci 
-Script de deploiement
 
 
-
+https://travis-ci.org/kacimimoghite/IntegrationContinue.svg?branch=master
 
    

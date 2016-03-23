@@ -20,7 +20,7 @@ dir.each  {|fn|
             content = f.read
             paths = content.scan(/<img src="([^"]*)"/)
         }
-        imagesDir='/home/travis/build/kacimimoghite/IntegrationContinue/test/images'
+        imagesDir='/home/travis/build/kacimimoghite/IntegrationContinue/images'
         # test that path is a file
         paths.flatten.each {|path|
           describe File do

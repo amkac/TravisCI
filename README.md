@@ -7,6 +7,7 @@ Dans ce projet le travail du groupe consiste à étudier les prototypes existant
 + SABRI Mohamed Amine (aminesabri)
 + IFRAH Anass (anassovich)
 + NKADI Saindy (Dorlige)
+
 ##Organisation##
 + Google Drive (https://drive.google.com/drive/folders/0B9ZYqapRQwNqRFNMOEFKYndVaDg)
 

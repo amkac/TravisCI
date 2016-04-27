@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Integration continue avec Travis-CI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="#">Integration continue avec Travis-CI</</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="index.html">Accueil</a></li>
+								<li><a href="page2.html">Travis</a></li>
+								<li><a href="page3.html">Déploiement</a></li>
+							</ul>
+						</nav>
+						
+					</header>
+
+			
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<section id="intro">
+								<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+								
+							</section>
+							          
+										<div id="travis"><h2><a href="#">Qu'est ce que Travis </a></h2></div>
+										Lorsque vous visitez des projets sur GitHub, 
+										vous avez certainement déjà apperçu des badges dans le README comme « build passing ».
+										Il s’agit d’un service proposé par<br/> Travis-CI.
+										Travis CI est un logiciel libre et un service en ligne utilisé pour compiler, tester et déployer le code source des logiciels développés, notamment en lien avec le<br/> service d'hébergement du code source GitHub. 
+										 
+										 
+										<br/><a href="#" class="image featured"><img src="images/travis-ci-process.png" alt="" /></a> 
+									
+									
+										<div id="config"><h2> Configuration de Travis pour l'intégration continue </h2></div>
+										
+										<ul>
+											<li ><b>Se connecter sur Travis avec les identifiants de Github.</b></li> 
+									
+											     Il est possible de se connecter sur Travis CI en passant par le site Github. Pour cela, il suffit de se connecter sur Github avec ses identifiants et dans une autre fenêtre,<br/> ouvrir Travis CI.
+											 
+										
+										
+										<li><b>Configurer les dépôts à "intégrer" de manière continue.</b>
+										</li>
+										En se connectant sur Travis avec les identifiants de GitHub, les projets ou dépôts se trouvant dans GitHub figurent aussi dans Travis. Pour les configurer à intégrer de <br/> manière continue, il suffit de cliquer sur l'icône " +" qui se trouve près de l'expression "My repositories". Une fois cliqué, dans la page qui apparait, mettre le dépôt ou <br/> projet voulu à valider.
+								
+										<li><b>Ajouter un fichier .travis.yml à la racine du dépôt.</b></li>
+										Il faut penser à l'ajouter avec git add.
+										
+										<li><b>Génération de la machine virtuelle.</b></li>
+										
+										Lors du git push (après un git commit bien sûr), Travis va générer une machine virtuelle qui va exécuter le script et indiquer un succès ( passing.svg ) si tout c’est bien <br/>passé.
+										</ul>
+										<a href="#" class="image featured"><img src="images/configTravis.png" alt=""/></a>
+										
+									<h2>Connecter Github et Travis</h2>
+									Pour ne pas avoir à préciser les mots de passe en clair dans vos scripts, il est possible d’indiquer les éléments de connexions de manière crypté. Ainsi il faut :
+									<ul>
+									<li><b>Associer un token à votre dépôt sous Github</b>(<font color="blue"><a  href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/ ">explication ici</a>)</font></li>
+									<li><b>Installer travis</b> </li>
+									gem install travis
+									<li><b>Crypter (et ajouter au fichier .travis.yml en même temps) votre token </b></li>
+									<b>travis encrypt MY_SECRET_ENV=super_secret --add env.matrix</b>
+									<br/>
+									Il est possible de valider la syntaxe du fichier .travis.yml en installant un utilitaire :<br/>
+									
+									<b>gem install travis-lint<br/>
+
+                                    travis-lint</b>
+									
+									</ul>
+									<h2> Quelques exemples de fichiers</h2>
+									<h3>Fichier Travis</h3>
+									Voici à quoi ressemble un fichier .travis.yml.<br/>
+									<a href="#" class="image featured"><img src="images/f1travis.png" alt=""/>
+									<img src="images/f2travis.png" alt=""/></a><br/><br/>
+									
+									<h3>Fichier de script lancé par Travis</h3>
+									C'est le fichier update-doc.sh.<br/>
+									<a href="#" class="image featured"><img src="images/fi3.png" alt=""/>
+									<img src="images/f4.png" alt=""/></a><br/><br/>
+									
+								     
+									  <ul class="actions">
+										<li><a href="integrationContinue.html" class="button big">Formation à Travis</a></li>
+									</ul>
+									</div>
+									
+								</header>
+								<footer>
+										 
+									    
+									
+									
+									
+								</footer>
+							</article>
+
+						
+						<!-- Pagination -->
+							<ul class="actions pagination">
+								<li><a href="index.html" class=" button big previous">Previous Page</a></li>
+								<li><a href="page3.html" class="button big next">Next Page</a></li>
+							</ul>
+
+					</div>
+					
+					
+					<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+								<header>
+									<h2>Integration continue avec Travis-CI</h2>
+									
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+							<section>
+								<div class="mini-posts">
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="index.html#Integration">Intégration continue en image</a></h3>
+											
+												<a href="index.html#Integration" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="index.html#Integration" class="image"><img src="images/Integration-continue.jpg" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="index.html#Formation à Git">Formation à Git</a></h3>
+												
+												<a href="index.html#Formation à Git" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="index.html#Formation à Git" class="image"><img src="images/git.jpg" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="index.html#Formation à Github">Formation à Github</a></h3>
+												
+												<a href="index.html#Formation à Github" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="index.html#Formation à Github" class="image"><img src="images/github.png" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="#travis" >Qu'est ce que Travis-CI</a></h3>
+												
+												<a href="#travis"  class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#travis" class="image"><img src="images/travis-ci-process.png" alt="" /></a>
+										</article>
+										
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="#config" >Configuration de Travis</a></h3>
+												
+												<a href="#config"  class="author"><img src="images/avatar.jpg" alt=" " /></a>
+											</header>
+											<a href="#config" class="image"><img src="images/configTravis.png" alt=" " /></a>
+										</article>
+										
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="page3.html#intro" >Déploiement sur Github avec Travis</a></h3>
+												
+												<a href="page3.html#intro"  class="author"><img src="images/avatar.jpg" alt=" " /></a>
+											</header>
+											<a href="page3.html#intro" class="image"><img src="images/f6.png" alt=" " /></a>
+										</article>
+
+								</div>
+							</section>
+
+			
+
+						
+
+						<!-- Footer -->
+							<section id="footer">
+								<div class="meta">
+								
+										<a href="#" class="author"><span class="name">Saindy NKADI</span><br/><span>Mars 18, 2016</span></a>
+									</div>
+								<ul class="icons">
+									<li><a href="https://twitter.com/?lang=fr" class="fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/" class="fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/" class="fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+									<li><a href="https://www.google.com/intl/fr_fr/mail/help/about.html" class="fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+								<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

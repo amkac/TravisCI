@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Integration continue avec Travis-CI</</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			
+						<!-- Header -->
+					<header id="header">
+						<h1><a href="#">Integration continue avec Travis-CI</</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="index.html">Accueil</a></li>
+								<li><a href="page2.html">Travis</a></li>
+								<li><a href="page3.html">Déploiement</a></li>
+								<li><a href="integrationContinue.html">Tutoriel J.-M. Bruel</a></li>
+							</ul>
+						</nav>
+						
+					</header>
+						
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+		
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions vertical">
+									<li><a href="#" class="button big fit">Log In</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+							<section id="intro">
+								<a href="#" class="logo"><img src="images/logoGithub.png" alt="" /></a>
+								
+							</section>
+										<h2><a href="#">Déploiement sur Github avec Travis</a></h2>
+										
+									Utiliser Travis-ci pour générer des pages Html à partir des fichier .adoc, et les pousser vers les pages Github.
+									<br/><br/>
+									<ol>
+									<h3><li> Pré-requis</li></h3>
+										<ul>
+										<li>Activation du Travis-ci pour le projet Github</li>
+										<li>Création d'une branche gh-pages sur le dépôt Github</li>
+										<li>création du token d'accès pour pouvoir publier le Html</li>
+										</ul>
+										<h3><li>Token d’acces et .travis.yml</li></h3>
+										Après avoir récupéré le token d’accès on va le crypter pour que Travis puisse l’utiliser :<br/>
+										<b>travis encrypt -r kacimimoghite/testHtmlGenerator GH_TOKEN=[le token d accès]</b><br/><br/>
+										Après avoir récupéré ce token crypté, on l'ajoute au fichier travis.yml  et on installe Asccidoctor pour convertir le .adoc en html, 
+										install:<br/>
+																	<b>	- gem install asciidoctor<br/>
+																		script:<br/>
+																		- asciidoctor faq.adoc -o html/faq.html<br/>
+																		env:<br/>
+																		global:<br/>
+																		- GH_REF: kacimimoghite/testHtmlGenerator.git<br/>
+																		- secure: <br/>
+																		after_success: 	<br/>
+																		- bash monscript.sh</b><br/><br/>
+																		
+										Pour la partie after success on utilise un script qui récupère le projet, copie le html avant de l’envoyer vers GitHub.<br/>
+										<b>#!/bin/bash<br/>
+
+									cp -R html $HOME/html<br/>
+
+										#configuration<br/>
+										cd $HOME<br/>
+
+										git config --global user.email "moghitkacimi@gmail.com"<br/>
+										git config --global user.name "kacimimoghite"<br/>
+
+										#clone branch gh-pages   <br/>
+										git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/${GH_REF}  gh-pages > /dev/null<br/>
+
+										cd gh-pages<br/>
+										ls<br/>
+
+										cp $HOME/html/faq.html ./index.html<br/>
+
+
+										git add -f .<br/>
+										git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages "<br/>
+										git push -fq origin gh-pages > /dev/null<br/>
+n
+
+										echo -e "Deploy completed\n"<br/>
+
+										#fi<br/><br/></b>
+										
+										<h3><li>Résultat sur Travis-CI</li></h3>
+										Sur Travis la génération du html et le deployement sur github passent avec succès.<br/><br/>
+										<a href="#" class="image featured"><img src="images/f7.png" alt=""/></a><br/><br/>
+										
+										<h3><li>Résultat sur GitHub pages</li></h3>
+										<a href="#" class="image featured"><img src="images/f6.png" alt=""/></a>
+										
+									</ol>
+								     
+									  <ul class="actions">
+										<li><a href="deploiement-sur-github.pdf" class="button big">Article sur le déploiement</a></li>
+									</ul>
+									</div>
+									
+								</header>
+								<footer>
+										 
+									    
+								</footer>
+							</article>
+
+						
+						<!-- Pagination -->
+							<ul class="actions pagination">
+								<li><a href="page2.html" class=" button big previous">Previous Page</a></li>
+								
+							</ul>
+
+					</div>
+
+<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								<a href="#" class="logo"><img src="images/logoGithub.png" alt="" /></a>
+								<header>
+									<h2>Integration continue avec Travis-CI</h2>
+									
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+							<section>
+								<div class="mini-posts">
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="index.html#Integration">Intégration continue en image</a></h3>
+											
+												<a href="index.html#Integration" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="index.html#Integration" class="image"><img src="images/Integration-continue.jpg" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="index.html#Formation à Git">Formation à Git</a></h3>
+												
+												<a href="index.html#Formation à Git" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="index.html#Formation à Git" class="image"><img src="images/git.jpg" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="index.html#Formation à Github">Formation à Github</a></h3>
+												
+												<a href="index.html#Formation à Github" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="index.html#Formation à Github" class="image"><img src="images/github.png" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="page2.html#travis" >Qu'est ce que Travis-CI</a></h3>
+												
+												<a href="page2.html#travis"  class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="page2.html#travis" class="image"><img src="images/travis-ci-process.png" alt="" /></a>
+										</article>
+										
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="page2.html#config" >Configuration de Travis</a></h3>
+												
+												<a href="page2.html#config"  class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="page2.html#config" class="image"><img src="images/configTravis.png" alt="" /></a>
+										</article>
+										
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="#intro" >Déploiement sur Github avec Travis</a></h3>
+												
+												<a href="#intro"  class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#intro" class="image"><img src="images/f6.png" alt="" /></a>
+										</article>
+
+								</div>
+							</section>
+
+						<!-- Footer -->
+							<section id="footer">
+								<div class="meta">
+								
+										<a href="#" class="author"><span class="name">Saindy NKADI</span><br/><span>Mars 18, 2016</span></a>
+									</div>
+								<ul class="icons">
+									<li><a href="https://twitter.com/?lang=fr" class="fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/" class="fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/" class="fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+									<li><a href="https://www.google.com/intl/fr_fr/mail/help/about.html" class="fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+								<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+							</section>
+
+
+					
+                        </section>
+
+			</div>
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -7,10 +7,20 @@ describe File do
     assert_equal File.file?('images/88x31.png'), true
   end
 end
+describe File do
+  it "should exist in the {images} directory" do
+    assert_equal File.file?('images/dilbert.png'), true
+  end
+end
+describe File do
+  it "should exist in the {images} directory" do
+    assert_equal File.file?('images/M4.png'), true
+  end
+end
 re = Regexp.new("\.html$") # asciidoc source file
 
 dir = Dir.new('/home/travis/build/kacimimoghite/IntegrationContinue/Html')
-dir.each  {|fn| 
+dir.each  {|fn|
     if ( fn =~ re ) then
         print "asciidoc source : " + fn + "\n"
         paths = []

@@ -8,7 +8,6 @@ script:
 - rake check_links
 - rake test
 
-
 env:
   global:
     - GH_REF: kacimimoghite/integrationContinue.git
